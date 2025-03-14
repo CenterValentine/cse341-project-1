@@ -13,7 +13,7 @@
   "paths": {
     "/": {
       "get": {
-        "description": "",
+        "description": "Hello World",
         "responses": {
           "200": {
             "description": "OK"
@@ -23,7 +23,7 @@
     },
     "/contacts/": {
       "get": {
-        "description": "",
+        "description": "Get all contacts",
         "produces": [
           "application/json"
         ],
@@ -34,7 +34,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Create a new contact",
         "parameters": [
           {
             "name": "body",
@@ -73,7 +73,7 @@
     },
     "/contacts/{id}": {
       "get": {
-        "description": "",
+        "description": "Get a contact by id",
         "produces": [
           "application/json"
         ],
@@ -92,7 +92,7 @@
         }
       },
       "put": {
-        "description": "",
+        "description": "Update a contact by id",
         "parameters": [
           {
             "name": "id",
@@ -135,7 +135,7 @@
         }
       },
       "delete": {
-        "description": "",
+        "description": "Delete a contact by id",
         "parameters": [
           {
             "name": "id",
