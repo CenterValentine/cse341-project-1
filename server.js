@@ -1,11 +1,25 @@
 const express = require('express');
 const mongodb = require('./data/database')
 const app = express();
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
+
+const corsOptions = {
+    origin: '*',
+    methods: 'GET, POST, PUT, DELETE',
+    allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept, Z-Key',
+};
+
+const swaggerRoutes = require('./routes/swagger');
+app.use(swaggerRoutes);
+
+app.use(cors(corsOptions));
 
 const port = process.env.PORT || 3000;
+app.use(bodyParser.json());
 
 app.use('/', require('./routes'));
-
 
 mongodb.initDb((err) => {
     if(err){console.log(err);}
