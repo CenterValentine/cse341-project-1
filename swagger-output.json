@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Users Api",
-    "description": "Users api",
+    "title": "Contacts Api",
+    "description": "Contacts api",
     "version": "1.0.0"
   },
   "host": "cse341-project-1-rfyt.onrender.com",
@@ -21,7 +21,7 @@
         }
       }
     },
-    "/users/": {
+    "/contacts/": {
       "get": {
         "description": "",
         "produces": [
@@ -71,7 +71,7 @@
         }
       }
     },
-    "/users/{id}": {
+    "/contacts/{id}": {
       "get": {
         "description": "",
         "produces": [

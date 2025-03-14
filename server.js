@@ -2,6 +2,7 @@ const express = require('express');
 const mongodb = require('./data/database')
 const app = express();
 const bodyParser = require('body-parser');
+const swaggerRoutes = require('./routes/swagger');
 const cors = require('cors');
 
 
@@ -11,7 +12,7 @@ const corsOptions = {
     allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept, Z-Key',
 };
 
-const swaggerRoutes = require('./routes/swagger');
+
 app.use(swaggerRoutes);
 
 app.use(cors(corsOptions));
